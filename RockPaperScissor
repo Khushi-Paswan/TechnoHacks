@@ -1,0 +1,27 @@
+import java.util.*;
+import java.util.Scanner;
+import java.util.Random;
+
+public class Main {
+    public static void main(String[] args) {
+       System.out.println("0 for rock|1 for paper|2 for scissor");
+       Scanner sc= new Scanner(System.in);
+       System.out.println("Enter your move: ");
+       int playerTurn= sc.nextInt();
+        System.out.println("Player move: " + playerTurn);
+        Random sc1= new Random();
+        int computerTurn=sc1.nextInt(3);
+        System.out.println("Computer move: " + computerTurn);
+        if(computerTurn==playerTurn){
+          System.out.println("The match is draw...");
+        }
+        else if(playerTurn == 0 && computerTurn == 1 || playerTurn == 1 && computerTurn == 2 || playerTurn==2&& computerTurn==0) {
+          System.out.println("You lost the match...");
+          System.out.println("Try again...");
+        }
+      else{
+          System.out.println("You win the match...");
+        }
+      System.out.println("THANK YOU FOR PLAYING");
+    }
+}
